@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <title>Salary Appraisal System</title>
+
+    <style>
+        header{
+      
+        
+        
+        background-color:#eeeeee;
+        background-size: cover;
+        background-position: center;
+        min-height:750px;
+
+        }
+        .section{
+            padding-top : 0vw;
+            padding-bottom:0vw;
+        }
+        .tabs .indicator{
+      background-color: #1a237e;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active{
+      background: orange-lighten-2;
+    }
+    
+   
+        }
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+     <!-- navbar -->
+  <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper transparent">
+        <div class="container">
+            <a href="\ " class="brand-logo black-text">Salary Appraisal System</a>
+            <a href="" class="sidenav-trigger"data-target="mobile-menu" >
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="\ "class="large black-text ">Home</a></li>
+                
+                 <li><a href="#about"class="large black-text ">About Us</a></li>
+             
+             <li><a href="https://accounts.google.com/signin/v2/sl/pwd?service=CPanel&flowName=GlifWebSignIn&flowEntry=ServiceLogin"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="Gmail">
+                <i class="fab fa-google"></i>
+         </a></li>
+            
+             <li><a href="https://github.com/HENIL-SATRA"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="Github">
+                    <i class="fab fa-github"></i>
+             </a></li>
+            <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BMYhralwaS0GTA5IgMJCYPQ%3D%3D"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="LinkedIn">
+                     <i class="fab fa-linkedin"></i>
+            </a></li>
+            </ul>
+            <ul class="sidenav grey lighten-2" id="mobile-menu">
+            <li><a href="\signup">Sign Up</a></li>
+            <li><a href="\selectType">Sign in</a></li>
+             <li><a href="#">About Us</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+        
+</div>
+<br>
+    <!-- contact form -->
+    
+    <section class="section container scrollspy" id="contact">
+      <div class="row">
+      
+      <div class="col s12 l5 offset-l3">
+          <form action="\profileform\" method = "POST">
+              {% csrf_token %}
+                  <h2 class="black-text center">Profile Details <br><br> </h2>
+                  
+                  <div class="input-field">
+                    <i class="material-icons prefix">fingerprint</i>
+                    <input type="number"id="number" name = "num" data-length="10" value = "{{foo}}">
+                    <label for="number">
+                        SSN Number
+                    </label>
+                </div>
+                <div class="input-field "><i class="material-icons prefix">wc</i>
+                <select name = "gender">
+                        <option value="" disabled selected>Select Your Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+              </select>  </div>
+              <div class="input-field "><i class="material-icons prefix">work</i>
+                <select name = "job">
+                        <option value="" disabled selected>Select your division</option>
+                        <option value="HR">HR</option>
+                        <option value="IT">IT</option>
+                        <option value="EMP">Emp</option>
+              </select>  </div>
+            <div class="input-field">
+                <i class="material-icons prefix">date_range</i>
+            <input type="text" id="date" class="datepicker" name = "dob">
+            <label for="date">Date Of Birth</label>
+        </div>
+        
+        
+
+ 
+<div class="input-field "><i class="material-icons prefix">place</i>
+<select name = "cs">
+        
+                
+         <option disabled selected> Maharashtra</option>
+         <optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;City">
+          <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mumbai</option>
+          <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pune</option>
+          <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nagpur</option>
+          <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Auragabad</option>
+         </optgroup>
+         <option disabled selected>Gujarat</option>
+         <optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;City">
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ahmedabad</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Surat</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Rajkot</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Vadodra</option>
+               </optgroup>
+        </optgroup>
+        <option disabled selected>Tamil Nadu</option>
+         <optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;City">
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Chennai</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Trichipalli</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Madurai</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Tiruchirappali</option>
+               </optgroup>
+        </optgroup>
+        <option disabled selected>Karnataka</option>
+         <optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;City">
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Bengaluru</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mysore</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Hubli</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mangalore</option>
+               </optgroup>
+               <option disabled selected>Select City</option>
+       </select>
+       <div class="input-field">
+            <i class="material-icons prefix">date_range</i>
+        <input type="text" id="date1" class="datepicker" name = "doj">
+        <label for="date1">Date Of Joining</label>
+    </div>
+<br>
+<div class="container center">
+  <div class="input-field ">
+       <a href="\signup" class="btn black waves-effect waves-light">Go Back</a>&nbsp &nbsp &nbsp&nbsp
+       <button href="\ " class="btn black waves-effect waves-light" type = "submit" value = "POST">Submit</button>
+   </div>
+</div>
+</div>>
+</form>
+</div>
+</div>
+</section>
+
+
+<!-- footer -->
+<footer class="page-footer grey darken-4">
+    <div class="container">
+        <div class="row">
+          <div class="col s12 l6 scrollspy" id="about">
+              <h5>About Us</h5>
+              <p>
+                 We are a group of 4 students from Vellore Institute of Technology pursuing B.Tech in CSE. We have created this project as a part of our DBMS Project under Prof. Navamani T.M.
+              </p> 
+              
+          </div>
+          <div class="col s12 l4 offset-l2 scrollspy" id="connect">
+              <h5>Connect</h5>
+              <ul>
+                  <li>
+                  <i class="fab fa-google "></i>
+                  <a href="https://accounts.google.com/signin/v2/sl/pwd?service=CPanel&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="grey-text text-lighten-3 ">&nbsp;&nbsp;Gmail</a>
+                  </li>
+                  <li>
+                   <i class="fab fa-github "></i>
+                   <a href="https://github.com/HENIL-SATRA" class="grey-text text-lighten-3">&nbsp;&nbsp;Github</a>
+                   </li>
+                   <li>
+                   <i class="fab fa-LinkedIn "></i>
+                   <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BMYhralwaS0GTA5IgMJCYPQ%3D%3D" class="grey-text text-lighten-3">&nbsp;&nbsp;LinkedIn</a>
+                   </li>
+                  
+              </ul>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright grey darken-3">
+        <div class="container center-align">&copy; SALARY APPRAISAL SYSTEM 2019</div>
+    </div>
+
+</footer>
+
+       <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('select').formSelect();
+        $('.dropdown-trigger').dropdown();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('input#number').characterCounter();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker({
+        disableWeekends :false
+
+    });
+    $('.tooltipped').tooltip();
+    $('.scrollspy').scrollSpy();
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <title>Salary Appraisal System</title>
+
+    <style>
+        header{
+      
+        
+        
+        background-color:#eeeeee;
+        background-size: cover;
+        background-position: center;
+        min-height:750px;
+
+        }
+        .section{
+            padding-top : 0vw;
+            padding-bottom:0vw;
+        }
+        .tabs .indicator{
+      background-color: #1a237e;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active{
+      background: orange-lighten-2;
+    }
+    
+   
+        }
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+  <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper transparent">
+        <div class="container">
+            <a href="" class="brand-logo black-text">Salary Appraisal System</a>
+            <a href="" class="sidenav-trigger"data-target="mobile-menu" >
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="welcome.html"class="large black-text ">Home</a></li>
+                
+                 <li><a href="#about"class="large black-text ">About Us</a></li>
+                 <li><a href="welcome.html"class="large black-text ">Log-Out</a></li>
+             <li><a href="https://accounts.google.com/signin/v2/sl/pwd?service=CPanel&flowName=GlifWebSignIn&flowEntry=ServiceLogin"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="Gmail">
+                <i class="fab fa-google"></i>
+         </a></li>
+            
+             <li><a href="https://github.com/HENIL-SATRA"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="Github">
+                    <i class="fab fa-github"></i>
+             </a></li>
+            <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BMYhralwaS0GTA5IgMJCYPQ%3D%3D"class="tooltipped btn-floating btn-small black darken-4"data-tooltip="LinkedIn">
+                     <i class="fab fa-linkedin"></i>
+            </a></li>
+            </ul>
+            <ul class="sidenav grey lighten-2" id="mobile-menu">
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Sign in</a></li>
+             <li><a href="#">About Us</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+        
+</div>
+<br>
+    <!-- contact form -->
+    
+    <section class="section container scrollspy" id="contact">
+        <div class="row"> <h2 class="black-text center">Welcome I.T.  </h2>
+              
+            </div>
+          <br><br>
+          {% load staticfiles %}
+            <div class="row">
+                    <div class="col s12 m6 l3 offset-l2 ">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="{%static 'img/login.jpg'%}">
+                          
+                          <a href="http://127.0.0.1:8000/admin/fsiup/userinfo/"class="btn-floating halfway-fab waves-effect waves-light grey-darken-4"><i class="material-icons">add</i></a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6 l3 offset-l1">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="{%static 'img/pass.jpg'%}">
+                              
+                              <a href="http://127.0.0.1:8000/admin/fsiup/userinfo/"class="btn-floating halfway-fab waves-effect waves-light grey-darken-4"><i class="material-icons">add</i></a>
+                            </div>
+                            
+                          </div>
+                        </div>
+</section>
+<br><br><br>
+<!-- footer -->
+<footer class="page-footer grey darken-4">
+    <div class="container">
+        <div class="row">
+          <div class="col s12 l6 scrollspy" id="about">
+              <h5>About Us</h5>
+              <p>
+                 We are a group of 4 students from Vellore Institute of Technology pursuing B.Tech in CSE. We have created this project as a part of our DBMS Project under Prof. Navamani T.M.
+              </p> 
+              
+          </div>
+          <div class="col s12 l4 offset-l2 scrollspy" id="connect">
+              <h5>Connect</h5>
+              <ul>
+                  <li>
+                  <i class="fab fa-google "></i>
+                  <a href="https://accounts.google.com/signin/v2/sl/pwd?service=CPanel&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="grey-text text-lighten-3 ">&nbsp;&nbsp;Gmail</a>
+                  </li>
+                  <li>
+                   <i class="fab fa-github "></i>
+                   <a href="https://github.com/HENIL-SATRA" class="grey-text text-lighten-3">&nbsp;&nbsp;Github</a>
+                   </li>
+                   <li>
+                   <i class="fab fa-LinkedIn "></i>
+                   <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BMYhralwaS0GTA5IgMJCYPQ%3D%3D" class="grey-text text-lighten-3">&nbsp;&nbsp;LinkedIn</a>
+                   </li>
+                  
+              </ul>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright grey darken-3">
+        <div class="container center-align">&copy; SALARY APPRAISAL SYSTEM 2019</div>
+    </div>
+
+</footer>
+
+       <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('select').formSelect();
+        $('.dropdown-trigger').dropdown();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('input#number').characterCounter();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker({
+        disableWeekends :false
+
+    });
+    $('.tooltipped').tooltip();
+    $('.scrollspy').scrollSpy();
+    });
+  </script>
+  
+</body>
+</html>
